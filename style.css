@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3a3d42; /* Dark gray background */
+    background-image: url('https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    text-align: center; /* Center text for better visual appeal */
+}
+
+input {
+    background-color: #5a5e63; /* Medium gray */
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.1),
+        0 15px 40px rgba(0, 0, 0, 0.1);
+    color: #f2f2f2; /* Light text color */
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s; /* Add transition for input focus */
+    width: 100%; /* Set width to 100% for full container width */
+    max-width: 300px; /* Set a maximum width for larger screens */
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #66b3ff, 0 0 15px #66b3ff; /* Blue glow effect on focus */
+}
+
+button {
+    background-color: #007bff; /* Bright blue background */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* White text color */
+    font-family: "Poppins", sans-serif; /* Consistent font */
+    font-size: 1rem; /* Font size */
+    padding: 0.75rem 1.5rem; /* Vertical and horizontal padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    margin-top: 1rem; /* Space above the button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow on focus */
+}
+
+.card {
+    background-color: #4f4f54; /* Darker gray background for the card */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    display: flex;
+    padding: 3rem;
+    max-width: 800px;
+    flex-direction: column; /* Make the card layout column for smaller screens */
+    transition: transform 0.3s; /* Add transition for scaling effect */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slightly scale up the card on hover */
+}
+
+.avatar {
+    border: 10px solid #3a3d42; /* Match border with body background */
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.avatar:hover {
+    transform: rotate(15deg); /* Rotate avatar slightly on hover */
+}
+
+.user-info {
+    color: #f2f2f2; /* Light text color */
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    background-color: #007bff; /* Blue for repository badges */
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for scale effect */
+}
+
+.repo:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.loading {
+    color: #f2f2f2; /* Light text color */
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.error {
+    color: #ff4d4d; /* Red for error messages */
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 1rem; /* Adjust padding */
+    }
+    
+    .avatar {
+        height: 100px;
+        width: 100px; /* Reduce avatar size on small screens */
+    }
+
+    .user-info {
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center align text */
+    }
+
+    .user-info ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .user-info ul li {
+        margin-bottom: 10px; /* Space between list items */
+    }
+}
